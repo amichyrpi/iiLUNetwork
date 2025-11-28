@@ -244,7 +244,7 @@ class iiLUChatClient {
         this.vocalStatus.textContent = 'Envoi...';
         
         try {
-            const response = await fetch(`${this.apiUrl}/api/chat`, {
+            const response = await fetch(`${this.apiUrl}/chat`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
