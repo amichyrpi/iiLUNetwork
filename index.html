@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>iiLU - Accueil</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #background-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            object-fit: cover;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+            color: #fff;
+            position: relative;
+            z-index: 1;
+            margin: auto;
+            top: 40%;
+            transform: translateY(-40%);
+            backdrop-filter: blur(10px) saturate(150%);
+            -webkit-backdrop-filter: blur(10px) saturate(150%);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+            background: url('Assets/iiLU.svg') no-repeat center;
+            background-size: contain;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 30px;
+            color: #eee;
+        }
+        .text-section {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+            color: #eee;
+            font-size: 18px;
+        }
+        .custom-link {
+            color: #6c63ff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+        .custom-link:hover {
+            color: #5750d6;
+        }
+        .start-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: rgba(108, 99, 255, 0.8);
+            border-radius: 8px;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+        .start-btn:hover {
+            background-color: rgba(87, 80, 214, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <video autoplay muted loop id="background-video">
+        <source src="Assets/Lavender.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+    </video>
+
+    <div class="container">
+        <div class="logo"></div>
+        <h1>Bienvenue sur iiLU</h1>
+
+        <div class="text-section">
+            <p>
+                iiLU est une intelligence artificielle open source. Elle ne conserve pas les données des utilisateurs, 
+                toutes les données sont stockées momentanément dans nos serveurs. Pour plus d'information à propos de iiLU, 
+                rendez-vous sur <a href="https://github.com/amichyrpi/T.R.A.M?tab=readme-ov-file" class="custom-link">le GitHub officiel de iiLU</a>.
+            </p>
+        </div>
+
+        <button class="start-btn" id="startButton">Accéder a iiLU</button>
+    </div>
+
+    <!-- Mentions légales -->
+    <footer style="position: fixed; bottom: 0; width: 100%; text-align: center; padding: 10px 0; background: rgba(0, 0, 0, 0.5); color: #ccc; font-size: 12px;">
+        &copy; 2025 Amory HEN. Tous droits réservés. <br>
+        Site édité par Ahen Studio. <br>
+        Pour toute question, contactez-moi sur <a href="https://github.com/amichyrpi" style="color: #ccc; text-decoration: underline;">https://github.com/amichyrpi</a>
+    </footer>
+
+    <script>
+        document.getElementById("startButton").addEventListener("click", () => {
+            window.location.href = "/chat";
+        });
+    </script>
+
+</body>
+</html>
