@@ -117,14 +117,8 @@
 
     <script>
         document.getElementById("startButton").addEventListener("click", () => {
-            // Si vous êtes sur GitHub Pages
-            if (window.location.hostname.includes('github.io')) {
-                // Utilisez le chemin relatif avec le nom du repo
-                window.location.href = "chat.html";
-            } else {
-                // En local, utilisez /chat
-                window.location.href = "/chat";
-            }
+            // Chemin relatif - fonctionne partout
+            window.location.href = "./chat.html";
         });
     </script>
 
