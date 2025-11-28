@@ -115,16 +115,16 @@
         <button class="start-btn" id="startButton">Accéder a iiLU</button>
     </div>
 
-    <!-- Mentions légales -->
-    <footer style="position: fixed; bottom: 0; width: 100%; text-align: center; padding: 10px 0; background: rgba(0, 0, 0, 0.5); color: #ccc; font-size: 12px;">
-        &copy; 2025 Amory HEN. Tous droits réservés. <br>
-        Site édité par Ahen Studio. <br>
-        Pour toute question, contactez-moi sur <a href="https://github.com/amichyrpi" style="color: #ccc; text-decoration: underline;">https://github.com/amichyrpi</a>
-    </footer>
-
     <script>
         document.getElementById("startButton").addEventListener("click", () => {
-            window.location.href = "/chat";
+            // Si vous êtes sur GitHub Pages
+            if (window.location.hostname.includes('github.io')) {
+                // Utilisez le chemin relatif avec le nom du repo
+                window.location.href = "chat.html";
+            } else {
+                // En local, utilisez /chat
+                window.location.href = "/chat";
+            }
         });
     </script>
 
